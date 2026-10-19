@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация об организации</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f6f9;
+            padding: 30px 15px;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .org-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            padding: 40px 36px;
+        }
+
+        .org-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0b3d91;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .org-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #0b3d91, #4a90e2);
+            border-radius: 2px;
+            margin: 0 0 30px 0;
+        }
+
+        .org-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #0b3d91;
+            min-width: 220px;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: #333;
+            flex: 1;
+        }
+
+        .font-selector {
+            background: #f8f9fb;
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin-top: 10px;
+        }
+
+        .font-selector h3 {
+            font-size: 16px;
+            color: #0b3d91;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .font-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .font-btn {
+            padding: 10px 18px;
+            border: 2px solid #d0d8e8;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            color: #333;
+        }
+
+        .font-btn:hover {
+            border-color: #4a90e2;
+            background: #eef4ff;
+        }
+
+        .font-btn.active {
+            border-color: #0b3d91;
+            background: #0b3d91;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(11, 61, 145, 0.3);
+        }
+
+        .font-preview {
+            margin-top: 18px;
+            padding: 16px 20px;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #e0e6f0;
+            font-size: 16px;
+            color: #333;
+            font-family: 'PT Sans', Arial, sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .org-card {
+                padding: 24px 18px;
+            }
+            .org-title {
+                font-size: 20px;
+            }
+            .info-label {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="org-card" id="orgCard">
+
+    <h1 class="org-title">Наименование организации на базе, которой Вы проходите практическую подготовку</h1>
+    <p class="org-subtitle">Официальный информационный лист</p>
+    <div class="divider"></div>
+
+    <div class="org-info">
+        <div class="info-row">
+            <span class="info-label">Полное наименование:</span>
+            <span class="info-value">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ЦЕНТР ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ»</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Сокращённое наименование:</span>
+            <span class="info-value">ООО «ЦДО»</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Юридический адрес:</span>
+            <span class="info-value">г.Москва, вн.тер.г. Муниципальный округ Орехово-Борисово Южное, ш.Каширское, д.112, к.1, кв.120</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">ИНН / КПП:</span>
+            <span class="info-value">7724366524 / 772401001</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">ОГРН:</span>
+            <span class="info-value">1167746510645</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Руководитель:</span>
+            <span class="info-value">Селиверстова Наталья Владимировна</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Контактный телефон:</span>
+            <span class="info-value">+7 (495) 123-45-67</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Электронная почта:</span>
+            <span class="info-value">info@example-org.ru</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Сфера деятельности:</span>
+            <span class="info-value">Деятельность по дополнительному профессиональному образованию прочая, не включенная в другие группировки</span>
+        </div>
+    </div>
+
+    <div class="font-selector">
+        <h3>Выберите вариант шрифта:</h3>
+        <div class="font-buttons">
+            <button class="font-btn active" data-font="'PT Sans', Arial, sans-serif" data-name="PT Sans (официальный)">
+                PT Sans — официальный
+            </button>
+            <button class="font-btn" data-font="'Times New Roman', Times, serif" data-name="Times New Roman">
+                Times New Roman
+            </button>
+            <button class="font-btn" data-font="'Georgia', 'Times New Roman', serif" data-name="Georgia">
+                Georgia
+            </button>
+            <button class="font-btn" data-font="'Verdana', 'Geneva', sans-serif" data-name="Verdana">
+                Verdana
+            </button>
+            <button class="font-btn" data-font="'Courier New', Courier, monospace" data-name="Courier New">
+                Courier New
+            </button>
+            <button class="font-btn" data-font="'Trebuchet MS', 'Lucida Grande', sans-serif" data-name="Trebuchet MS">
+                Trebuchet MS
+            </button>
+        </div>
+        <div class="font-preview" id="fontPreview">
+            Пример текста: «Наименование организации на базе, которой Вы проходите практическую подготовку».
+        </div>
+    </div>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.font-btn');
+    const orgCard = document.getElementById('orgCard');
+    const fontPreview = document.getElementById('fontPreview');
+
+    function applyFont(fontFamily, name) {
+        orgCard.style.fontFamily = fontFamily;
+        fontPreview.style.fontFamily = fontFamily;
+        fontPreview.textContent = `Пример текста (${name}): «Наименование организации на базе, которой Вы проходите практическую подготовку».`;
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const fontFamily = btn.dataset.font;
+            const name = btn.dataset.name;
+            applyFont(fontFamily, name);
+        });
+    });
+
+    applyFont("'PT Sans', Arial, sans-serif", "PT Sans");
+</script>
+
+</body>
+</html>
