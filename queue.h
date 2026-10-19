@@ -1,4 +1,3 @@
-// queue.h
 #pragma once
 
 class Queue {

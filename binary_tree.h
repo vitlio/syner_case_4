@@ -1,4 +1,4 @@
-// binary_tree.h
+
 #pragma once
 
 class BinaryTree {
@@ -6,9 +6,9 @@ public:
     BinaryTree() = default;
     ~BinaryTree() = default;
 
-    void push(int value);           // вставка
-    bool pop(int value);            // удаление по значению
-    bool search(int value) const;   // поиск
+    void push(int value);
+    bool pop(int value);
+    bool search(int value) const;
     bool empty() const;
     size_t size() const;
 };
